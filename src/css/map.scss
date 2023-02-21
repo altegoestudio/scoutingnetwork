@@ -1,0 +1,32 @@
+.map{
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  &_container{
+    width: 100%;
+    max-width: $containerWidth;
+    &_description{
+      text-align: center;
+      font-weight: normal;
+    }
+    h3{
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      @media screen and (max-width: 1000px){
+        font-size: 34px;
+      }
+    }
+    &_img{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+      img{
+        width: 100%;
+        max-width: 1000px;
+        object-fit: fit;
+      }
+    }
+  }
+}

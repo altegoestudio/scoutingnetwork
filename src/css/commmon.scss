@@ -1,0 +1,26 @@
+.btn{
+  background-color: $secundary;
+  width: 180px;
+  text-align: center;
+  border: 1px solid $secundary;
+  height: 60px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: baseline;
+  &:hover{
+    background-color: $primary;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  &-alt{
+    background-color: inherit;
+    border: 1px solid $secundary;
+  }
+}
+.botonera{
+  margin-top: calc(8*5px);
+  display: flex;
+  gap: calc(8*4px);
+}

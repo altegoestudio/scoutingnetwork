@@ -1,0 +1,67 @@
+.pill{
+  border: 1px solid #287BCA;
+  padding: 32px;
+  padding-bottom: 90px;
+  border-radius: 32px;
+  width: 300px;
+  transform: scale(1);
+  transition: transform .4s;
+  filter: drop-shadow(0px 0px 0px lightgrey);
+  background-color: white;
+  &:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 4px lightgrey);
+  }
+  &_img{
+    margin-bottom: 22px;
+  }
+  &_plan{
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 4px;
+  }
+  &_description{
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 27px;
+  }
+  &_price{
+    font-size: 48px;
+  }
+  &_submit{
+    width: 296px;
+    height: 56px;
+    border: 1px solid $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    margin-bottom: 32px;
+    margin-top: 24px;
+  }
+  &_benefit{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:12px;
+    @media screen and (max-width: 650px){
+      font-size: 12px;
+    }
+    img{
+      width: 24px;
+      height: 24px;
+    }
+    p{
+      color: #5D6B6F;
+    }
+  }
+}
+.highlight{
+  background-color: $alternative;
+  border: 1px solid $alternative;
+  .pill_submit{
+    background-color: black;
+    color: $white;
+  }
+}

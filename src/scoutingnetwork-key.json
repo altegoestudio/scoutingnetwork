@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "scoutingnetwork-3b069",
+  "private_key_id": "55a1d6f2142bb6ed94bbee28d5911c7f2027daa9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDbcN6SF7DyjqSX\nJfq9OBseq8tYI87+0t6saabVAY2PFOoxP5+GB0j654N1iAJ9lqq5rwYs0uem2xR+\nxeuH6quSZlwADwdQShHOWz5J4nXaOXevx/7OxcGDj3mGbJRuso4V/epmhfqQk6og\noQn+YcPUqwLx1jfYsBgrLXRnGYvahclh9qxKaLlusqzU5B2zcjiqnADk02jQGMl/\n6Y2rbD2DzevDQ2EwNfMBMfIGmhQwJzV/FdMRUSbuMabEUrdBdxPZdFTxHS/yMHnt\nSZzuu1D+DxbTRyOEXm1guyxGhDWEn8IjGWNI82R3c6f7Ou0tRCfd9XxkV2rZPehn\nrqXqKU9vAgMBAAECggEAIk1b9WFPrzLeBqSQs+hj0OEQ6ce7MTk8Rp5DTnOuMaoW\ny7kC0jwsS9BJy+MFZKVbLahu4i3buUjwxLpijX4A8OMgSYAP6ByT+PppW7pTKtgl\n3ev46FCgZdTVLc6mS0GNFWH6NKmH1/bFNtGFkuasan+K98vBMhWgyYsS8ZTcOD28\nbhGlvsD0YHWGg3QnGWQrtqKB7sbpYAcZD7BF0rc/2p3+hMZkXWNOuTFZ3nXnODNL\nYaxpCDWsPsIi6XJxBo39w1KrKbNB6f+iExfU54UV/JoYlqjToxdb0DfsFQdD+1hN\nFI1ZzFslM9cabHOLRSnd7vE0IZnDGnNyzmis99CQLQKBgQD1jhNvNF+nKSoNXdjP\nmBRtKkfc0CztBgFIN5MCnq7G4QQH8+TSqnCj6S5I2SAeeliIWJQBKIZNgCrCizrP\nt2tIBP445rMzCkdRlVsG8am5/CxH3J1GoxkhU+b87DlOZ9ucQtl+bxFZCcyGoLK9\nlCk9xOZDlevQAY1RjzyEvkiefQKBgQDkxm3bez+bTRIAL38XJHfX5pQGD85suPma\nehICr1q0f+H9B5wAUMb3y27/6CAFE2p0s3Z+qv1KccDUnYPx9bLHAv4c1MO7rZw2\n7nF0FQiOYaeBN1/s5mS/hb6sphzynfcAoi232mvx8JzXOOwsiB8lzSoVUHdB04pT\nGpRntAEtWwKBgCW3JsED2FVCe1UGPxDTmP+TaOo/h0b4jyXac1gJq2qckRPvoAvD\nZf2nCRbjUo2b2RFIGaN75/TrZKXw4J2a3H15VtrChG+oen/LYunUIG+SjfKTrgx1\nbJyz2Fyso7ipNw/vLJzAzndQi/t5nzqDETqNjZh/5HJUarJGP9Nbrqe5AoGAVDxo\nCO+prQJExYK3lgrcgcep6014oXm+lk2qQgjVKi8IRAXAQDF+AZGLbnjHCXdrtEq8\nL8m/9+BIs0DIa5gfWr3UWUNSStGS+nrzlV2FR//XEHIWRQFUSVzyp1mGwSK+5yHQ\nGak4I96HsYuJEqCQb3fKrgxxzPAaN51K1aBm6o8CgYBbh68VheppaQUGNlSyXvMj\nDirq4EffOzQ8DqIjVD/OM7eHpFFh/SKKvagI+rhg3oM5a0Egj5k98oVnVePnOpye\nk4NbUTAbscaUQ8drdMMDRm6URWah59PnFfD5J3F9SrkmhfxKq57oS/alaDJmq9h5\ngriaapyUEoty5Yb/BaOwVA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-dg4su@scoutingnetwork-3b069.iam.gserviceaccount.com",
+  "client_id": "101824745282935102031",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-dg4su%40scoutingnetwork-3b069.iam.gserviceaccount.com"
+}

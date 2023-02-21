@@ -1,0 +1,22 @@
+$white: #ffffff;
+$primary: #091524;
+$containerWidth: 1400px;
+$secundary: #287BCA;
+$alternative: #C5E9F1;
+$primaryFont: 'Open Sans', sans-serif;
+$xl: 1000px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 375px;
+
+
+@mixin paragraph($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, .25);
+  color: #fff;
+}
+
+main{
+  min-height: 85vh;
+}

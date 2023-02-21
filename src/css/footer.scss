@@ -1,0 +1,15 @@
+footer{
+  background-color: $primary;
+  
+  bottom: 0px;
+  width: 100%;
+  color: $white;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_container{
+  width: 100%;
+  text-align: center;
+  max-width: $containerWidth;
+}

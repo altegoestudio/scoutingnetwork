@@ -1,0 +1,512 @@
+[
+ {
+   "name": "Emme",
+   "lastname": "Jatta",
+   "country": "Gambiano",
+   "position": "Portero",
+   "foot": "Left",
+   "category": 2009,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Ebrima",
+   "lastname": "Touray",
+   "country": "Gambiano",
+   "position": "Portero",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Njobo",
+   "lastname": "Kandeh",
+   "country": "Gambiano",
+   "position": "Central",
+   "foot": "Left",
+   "category": 2008,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Ebrima",
+   "lastname": "Dembele",
+   "country": "Gambiano",
+   "position": "Central",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Abdoulie",
+   "lastname": "Barrow",
+   "country": "Gambiano",
+   "position": "Central",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Omar",
+   "lastname": "Dahaba",
+   "country": "Gambiano",
+   "position": "Central",
+   "foot": "Left",
+   "category": 2009,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Sheikh",
+   "lastname": "Camara",
+   "country": "Gambiano",
+   "position": "Lateral Derecho",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Gibril",
+   "lastname": "Nicol",
+   "country": "Gambiano",
+   "position": "Lateral Derecho",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Talibouya",
+   "lastname": "Jammeh",
+   "country": "Gambiano",
+   "position": "Lateral Izquierdo/Extremo Izquierdo",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Mustapha",
+   "lastname": "Sanynag",
+   "country": "Gambiano",
+   "position": "Lateral Derecho",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Andala",
+   "lastname": "Ceesay",
+   "country": "Gambiano",
+   "position": "Contencion",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Ansumana",
+   "lastname": "Touray",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Modou Lamin",
+   "lastname": "Ceesay",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Abba",
+   "lastname": "Camara",
+   "country": "Gambiano",
+   "position": "Centrocampista/Mediapunta",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Gibril",
+   "lastname": "Jallow",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Lamin",
+   "lastname": "Mansally",
+   "country": "Gambiano",
+   "position": "Mediapunta",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Muhammed",
+   "lastname": "Joof",
+   "country": "Gambiano",
+   "position": "Mediapunta",
+   "foot": "Left",
+   "category": 2008,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Saikou",
+   "lastname": "Saidy",
+   "country": "Gambiano",
+   "position": "Extremo",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Lamin",
+   "lastname": "Badjan",
+   "country": "Gambiano",
+   "position": "Extremo",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Omar",
+   "lastname": "Bojang",
+   "country": "Gambiano",
+   "position": "Extremo",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Dawda",
+   "lastname": "Janko",
+   "country": "Gambiano",
+   "position": "Extremo",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Hawsu",
+   "lastname": "Sanneh",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2007,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "David",
+   "lastname": "Efinaro",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Ansu",
+   "lastname": "Sambou",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "David",
+   "lastname": "Jesuorobo",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Mamadi",
+   "lastname": "Saidy",
+   "country": "Gambiano",
+   "position": "Delantero Centro/Extremo Derecho",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Pa Saikou",
+   "lastname": "Kujabi",
+   "country": "Gambiano",
+   "position": "Portero",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Muhammed",
+   "lastname": "Kamaso",
+   "country": "Gambiano",
+   "position": "Portero",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Abdoulie",
+   "lastname": "Nije",
+   "country": "Gambiano",
+   "position": "Lateral Izquierdo",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Bubacarr",
+   "lastname": "Sanneh",
+   "country": "Gambiano",
+   "position": "Lateral Derecho",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Abubacarr",
+   "lastname": "Kejera",
+   "country": "Gambiano",
+   "position": "Lateral Derecho",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Modou",
+   "lastname": "Faye",
+   "country": "Gambiano",
+   "position": "Lateral Izquierdo",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Simon",
+   "lastname": "Mendy",
+   "country": "Gambiano",
+   "position": "Central",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Dimingo",
+   "lastname": "Mendy",
+   "country": "Gambiano",
+   "position": "Central",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Buba",
+   "lastname": "Sarr",
+   "country": "Gambiano",
+   "position": "Contencion",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Edward",
+   "lastname": "Yanga",
+   "country": "Gambiano",
+   "position": "Contencion",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Bully",
+   "lastname": "Mansally",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Saikou",
+   "lastname": "Colley",
+   "country": "Gambiano",
+   "position": "Extremo Izquierdo",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Adeine",
+   "lastname": "Omisakin",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Modou Lamin",
+   "lastname": "Camara",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Musa",
+   "lastname": "Suso",
+   "country": "Gambiano",
+   "position": "Extremo Derecho",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Luis",
+   "lastname": "Bass",
+   "country": "Gambiano",
+   "position": "Extremo Derecho",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Musa",
+   "lastname": "Jammeh",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Tamsir",
+   "lastname": "Mbowe",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Modou Lamin",
+   "lastname": "Jobe",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Yahya James",
+   "lastname": "Demba",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Kebba",
+   "lastname": "Touray",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Surahata",
+   "lastname": "Suso",
+   "country": "Gambiano",
+   "position": "Centrocampista",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Babucarr",
+   "lastname": "Touray",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2004,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Mamad",
+   "lastname": "Sonko",
+   "country": "Gambiano",
+   "position": "Delantero Centro",
+   "foot": "Left",
+   "category": 2006,
+   "city": "",
+   "club": ""
+ },
+ {
+   "name": "Edrissa",
+   "lastname": "Darboe",
+   "country": "Gambiano",
+   "position": "Portero",
+   "foot": "Left",
+   "category": 2005,
+   "city": "",
+   "club": ""
+ }
+]
