@@ -1,0 +1,58 @@
+.login{
+  padding-top: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &_main{
+    background-color: $primary;
+  }
+  &_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    background-color: white;
+    padding: 34px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 350px;
+    &_form{
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      input{
+        height: 30px;
+        border-radius: 15px;
+        padding-left: 16px;
+      }
+      label{
+        font-size: 16px;
+
+      }
+      button{
+        background: none;
+      	color: inherit;
+      	border: none;
+      	padding: 0;
+      	font: inherit;
+      	cursor: pointer;
+      	outline: inherit;
+        font-size: 14px;
+        background-color: $primary;
+        height: 40px;
+        color: white;
+        margin-top: 45px;
+        border-radius: 15px;
+        margin-bottom: 34px
+
+      }
+      h2{
+        text-align: center;
+        padding-bottom: 34px;
+      }
+    }
+  }
+}

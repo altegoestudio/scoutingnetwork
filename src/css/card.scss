@@ -1,0 +1,52 @@
+.card{
+  padding-top: 150px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  &_card{
+    width: 100%;
+    padding-bottom: 50px;
+    max-width: 1200px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 8px rgba(110, 110, 110, 0.4);
+    border-radius: 4px;
+    &_data{
+      padding: 30px;
+      padding-top: 56px;
+      display: flex;
+      gap: 60px;
+      display: flex;
+      align-items: center;
+      &_text{
+        &-player{
+
+        }
+        &-club{
+          font-size: 13px;
+          font-weight: lighter;
+          margin-top: -23px;
+          color: $secundary;
+        }
+        &-description{
+          font-size: 15px;
+          font-weight: normal;
+          margin-bottom: 40px;
+        }
+        &-data{
+          font-size: 15px;
+          font-weight: lighter;
+          color: black;
+          margin-top: -16px;
+          span{
+            color: $secundary;
+          }
+        }
+      }
+    }
+    &_botonera{
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+}

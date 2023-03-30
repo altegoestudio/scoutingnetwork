@@ -1,3 +1,6 @@
+import { getAuth } from "firebase/auth";
+
+
 export default function Cpanel(){
   return(
     <div>

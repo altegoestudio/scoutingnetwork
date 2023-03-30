@@ -1,20 +1,29 @@
-import {NavLink, Link, useNavigate} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import logo from "../img/logo-white.png";
+import { useState, useEffect } from 'react';
 import hamburger from '../img/hamburger.png';
 
-export default function Header(){
-   const navigate = useNavigate();
+export default function Header(props){
+   var userData = props.userData;
+   console.log(userData);
+   const auth = getAuth();
 
-   const handleLogout = () => {
-     navigate("/")
-   }
 
    const goToAnchor = (e,val) => {
      let anchorElement = document.getElementById(val);
      e.preventDefault();
-     console.log(val);
      anchorElement.scrollIntoView({behavior:'smooth'});
    }
+
+   const handleLogout = () => {
+     auth.signOut();
+   }
+
+   useEffect(() => {
+     userData = props.userData;
+     console.log(userData);
+   }, [props.userData]);
 
   return(
     <header className="header">
@@ -58,25 +67,35 @@ export default function Header(){
           </li>
         </ul>
       </div>
-      <div className="botonera-login">
-        <div >
-          <Link to='/login' >
-            <button
-              className="header_container_nav_btn header_container_nav_btn-login"
-              onClick={handleLogout}
-            >Login</button>
-          </Link>
-          <Link to='/register' >
-            <button
-              className="header_container_nav_btn header_container_nav_btn-register"
-              onClick={handleLogout}
-            >Register</button>
-          </Link>
+      {!userData &&
+        <div className="botonera-login">
+            <div >
+              <Link to='/login' >
+                <button
+                  className="header_container_nav_btn header_container_nav_btn-login"
+
+                >Login
+                </button>
+              </Link>
+              <Link to='/register' >
+                <button
+                  className="header_container_nav_btn header_container_nav_btn-register"
+
+                >Register
+                </button>
+              </Link>
+            </div>
+            <div className='header_container_hamburger'>
+              <img src={hamburger}/>
+            </div>
           </div>
-          <div className='header_container_hamburger'>
-            <img src={hamburger}/>
-          </div>
-      </div>
+      }
+      {userData &&
+        <div className='user'>
+          <div className='user_name'>{userData.displayName}</div>
+          <button onClick={handleLogout} className="user_btn">Logout</button>
+        </div>
+      }
 
      </div>
     </header>

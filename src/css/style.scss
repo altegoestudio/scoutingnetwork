@@ -11,6 +11,10 @@
 @import "./pill.scss";
 @import "./map.scss";
 @import './player.scss';
+@import './login.scss';
+@import './playersCard.scss';
+@import './private.scss';
+@import './card.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
 
@@ -29,4 +33,19 @@ h3{
 p{
   font-weight: bold;
   line-height: 170%;
+}
+
+.links-none{
+  text-decoration: none;
+  color: inherit;
+}
+a:visited{
+  color: inherit;
+}
+.btn2{
+  background-color: $secundary;
+  color: white;
+  font-size: 14px;
+  width: 183px;
+  height: 38px;
 }

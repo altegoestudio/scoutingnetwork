@@ -1,7 +1,10 @@
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import "./css/style.scss";
+import "./firebase.js";
+import { useState, useEffect } from 'react';
 
 
 import Home from './pages/home';
@@ -15,11 +18,28 @@ import Cpanel from './pages/cpanel';
 import Header from "./components/header";
 import Footer from "./components/footer";
 
+const auth = getAuth();
+
+
+
+
 
 export default function App() {
+
+  var [userData, setUserData] = useState(null);
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUserData(user);
+      console.log(userData.displayName);
+    } else {
+      setUserData(null);
+    }
+  });
+
   return (
     <BrowserRouter>
-     <Header/>
+     <Header userData={userData}/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="register" element={<Register/>}/>

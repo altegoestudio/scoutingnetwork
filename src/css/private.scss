@@ -1,0 +1,22 @@
+.private{
+  &_sections{
+    width: 100%;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    &_fields{
+      border: 1px solid lightgrey;
+      border-width: 0px 2px 0px 0px;
+      &_flex{
+        width: 600px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+    &_list{
+
+    }
+  }
+}

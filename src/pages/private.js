@@ -1,91 +1,173 @@
-import {Link} from "react-router-dom";
-import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+//React
+import * as React from 'react';
+import {Link, useNavigate} from "react-router-dom";
 import { useState, useEffect } from 'react';
+//firebase
 import {readCRUD} from '../firebase.js';
-//import { initializeApp } from "firebase/app";
-//import { getFirestore, collection, doc, getDocs, addDoc, updateDoc, deleteDoc} from 'firebase/firestore/lite';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
-/*
-const firebaseConfig = {
-  apiKey: "AIzaSyCZVPfGMyufpLRk0ydoXQRSfV7FHuCcoPs",
-  authDomain: "scoutingnetwork-3b069.firebaseapp.com",
-  projectId: "scoutingnetwork-3b069",
-  storageBucket: "scoutingnetwork-3b069.appspot.com",
-  messagingSenderId: "446252563481",
-  appId: "1:446252563481:web:99d07b2d46fa99a86a7e88"
-};
+//Components
+import Tabla from '../components/tabla.js';
+import PlayersCard from '../components/playersCard.js';
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+//MUI
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField';
 
+const auth = getAuth();
+var online = false;
 
-*/
-export default function Private(){
-  const [data, setData] = useState([]);
-  /*
-  async function readCRUD(colID){
-    const coleccion = collection(db, colID);
-    const citySnapshot = await getDocs(coleccion);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
-    setData(cityList);
-    console.log(cityList[0].city);
-    //return cityList
+//// TODO: hacer una funcion modular
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    const uid = user.uid;
+    console.log(uid);
+    online = true;
+  } else {
+    console.log("Welcome, unknow user");
   }
-  */
+});
+
+export default function Private(){
+  const navigate = useNavigate();
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
+  const [foot, setFoot] = useState('');
+  const [filter, setFilter] = useState([]);
+  const [aux, setAux] = useState([]);
+
+
+
   useEffect(() => {
-    console.log(data);
+
     const fetchData = async () => {
       var newData =  await readCRUD('players');
       setData(newData);
-      console.log(newData);
+      setFilter(newData);
     }
     fetchData().catch(console.error);
-
-
-
   }, []);
 
-  return (
-    <>
-      <main>
-      <div class="player_container">
-        <h4>Buscador</h4>
-        <input type='text' class="player_search" placeholder='Buscar...'/>
-      </div>
-
-      <table class="blueTable">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Categoria</th>
-            <th>Ciudad</th>
-            <th>Pais</th>
-            <th>Posicion</th>
-            <th>Pie</th>
-            <th>Club</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((player) => (
-            <tr>
-              <td>{player.name} {player.lastname}</td>
-              <td>{player.category}</td>
-              <td>{player.city}</td>
-              <td>{player.country}</td>
-              <td>{player.position}</td>
-              <td>{player.foot}</td>
-              <td>{player.club}</td>
-            </tr>
-          ))}
 
 
-        </tbody>
-      </table>
-      </main>
+  const handleCategory = (event) => {
 
-    </>
-  )
+    setCategory(event.target.value);
+    /*
+    var filtered = data.filter( player => {
+      if(event.target.value == null){
+        return true;
+      }else{
+        return player.category == event.target.value;
+      }
+    })
+    //setFilter(filtered);
+    */
+  };
+
+  const botonFiltrar = () => {
+
+    var filtered = data.filter( player => {
+        return player.category == category;
+    })
+    setFilter(filtered);
+  }
+
+  const borrarFiltros = () => {
+    setFilter(data);
+    setCategory(null);
+  }
+
+
+  const handleSearch = (event) => {
+
+    setSearch(event.target.value);
+    var searchFiltrado = data.filter( player => {
+      let
+      playerName = player.name.toLowerCase(),
+      playerLastname = player.lastname.toLowerCase(),
+      playerFullName = playerName + " " + playerLastname,
+      tofind = event.target.value.toLowerCase(),
+      tofind_noDiacritics = sinDiacriticos(tofind);
+
+
+      return playerFullName.includes(tofind_noDiacritics);
+    })
+    setFilter(searchFiltrado);
+  };
+
+  let sinDiacriticos = (()=>{
+      let de = 'ÁÃÀÄÂÉËÈÊÍÏÌÎÓÖÒÔÚÜÙÛÑÇáãàäâéëèêíïìîóöòôúüùûñç',
+           a = 'AAAAAEEEEIIIIOOOOUUUUNCaaaaaeeeeiiiioooouuuunc',
+          re = new RegExp('['+de+']' , 'ug');
+
+      return texto =>
+          texto.replace(
+              re,
+              match => a.charAt(de.indexOf(match))
+          );
+  })();
+
+
+  if(online){
+    return (
+      <>
+        <main>
+          <div className="private_sections">
+            <div className="private_sections_fields">
+              <div className="private_sections_fields_flex">
+
+                <h2>Buscador por nombre</h2>
+                <TextField
+                  id="search-field"
+                  label="Buscar..."
+                  variant="outlined"
+                  value={search}
+                  onChange={handleSearch}
+                />
+
+
+                <h2>Filtros</h2>
+                <FormControl fullWidth>
+
+                  <InputLabel id="demo-simple-select-label">Categoria</InputLabel>
+                  <Select
+                    labelId="age-select"
+                    id="age-select"
+                    value={category}
+                    label="Age"
+                    onChange={handleCategory}
+                  >
+                    <MenuItem value={null}>All</MenuItem>
+                    <MenuItem value={"2007"}>2007</MenuItem>
+                    <MenuItem value={"2008"}>2008</MenuItem>
+                    <MenuItem value={"2009"}>2009</MenuItem>
+                  </Select>
+                </FormControl>
+                
+                <div className="btn" onClick={botonFiltrar}>Filtrar</div>
+                <div className="btn" onClick={borrarFiltros}>Borrar filtros</div>
+
+
+
+              </div>
+            </div>
+            <div className="private_sections_list">
+              <PlayersCard data={filter}/>
+            </div>
+          </div>
+        </main>
+
+      </>
+    )
+  }else{
+    return (
+      navigate("/login")
+    )
+  }
+
 }
