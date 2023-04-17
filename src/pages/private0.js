@@ -25,8 +25,8 @@ var online = false;
 onAuthStateChanged(auth, (user) => {
   if (user) {
     const uid = user.uid;
+    console.log(uid);
     online = true;
-    console.log("Welcome," + uid);
   } else {
     console.log("Welcome, unknow user");
   }
@@ -34,80 +34,55 @@ onAuthStateChanged(auth, (user) => {
 
 export default function Private(){
   const navigate = useNavigate();
-  const [bkdata, setBkdata] = useState([]);
   const [data, setData] = useState([]);
-  const [filtered, setFiltered] = useState([]);
-  const [inputSearch, setInputSearch] = useState([]);
-  const [search, setSearch] = useState([]);
-
-
-  const [category, setCategory] = useState(null);
-  const [position, setPosition] = useState(null);
-
-
-
-
-
-  const listCategory = bkdata.reduce( (acc, player) => {
-    var indice = acc.findIndex(item => item.category == player.category);
-    if(indice == -1){
-      acc.push(player);
-    }
-    return acc
-  }, [])
-
-  const listPosition = bkdata.reduce( (acc, player) => {
-    var indice = acc.findIndex(item => item.position == player.position);
-    if(indice == -1){
-      acc.push(player);
-    }
-    console.log(acc);
-    return acc
-  }, [])
-
-
+  const [search, setSearch] = useState('');
+  const [category, setCategory] = useState('');
+  const [foot, setFoot] = useState('');
+  const [filter, setFilter] = useState([]);
+  const [aux, setAux] = useState([]);
+  const [getcategories, setGetcategories] = useState([]);
 
 
 
   useEffect(() => {
+
     const fetchData = async () => {
       var newData =  await readCRUD('players');
-      setBkdata(newData);
+      console.log(newData[0].country);
       setData(newData);
-      setFiltered(newData);
-      setSearch(newData);
+      setFilter(newData);
+      categories();
     }
     fetchData().catch(console.error);
   }, []);
 
-
-
-
-  const getFiltrar = () => {
-
-    var newFilter = data
-    .filter( player => {
-        return category == null ? player : player.category == category;
-    })
-    .filter( player => {
-        return position == null ? player : player.position == position;
-    })
-
-    setFiltered(newFilter);
-    setSearch(newFilter);
+  const categories = () => {
+    const arraySinRepetidos = [... new Set(filter.category)];
+    console.log(arraySinRepetidos);
   }
 
-  const deleteFiltros = () => {
-    setFiltered(bkdata);
+  const handleCategory = (event) => {
+    setCategory(event.target.value);
+  };
+
+  const botonFiltrar = () => {
+
+    var filtered = data.filter( player => {
+        return player.category == category;
+    })
+    setFilter(filtered);
+  }
+
+  const borrarFiltros = () => {
+    setFilter(data);
     setCategory(null);
-    setPosition(null);
-    setSearch(bkdata);
   }
 
 
   const handleSearch = (event) => {
-    setInputSearch(event.target.value);
-    var searchFiltrado = filtered.filter( player => {
+
+    setSearch(event.target.value);
+    var searchFiltrado = data.filter( player => {
       let
       playerName = player.name.toLowerCase(),
       playerLastname = player.lastname.toLowerCase(),
@@ -118,7 +93,7 @@ export default function Private(){
 
       return playerFullName.includes(tofind_noDiacritics);
     })
-    setSearch(searchFiltrado);
+    setFilter(searchFiltrado);
   };
 
   let sinDiacriticos = (()=>{
@@ -147,7 +122,7 @@ export default function Private(){
                   id="search-field"
                   label="Buscar..."
                   variant="outlined"
-                  value={inputSearch}
+                  value={search}
                   onChange={handleSearch}
                 />
 
@@ -161,44 +136,27 @@ export default function Private(){
                     id="age-select"
                     value={category}
                     label="Age"
-                    onChange={e => setCategory(e.target.value)}
+                    onChange={handleCategory}
                   >
-                    <MenuItem value={null}>All</MenuItem>
-                    {listCategory.map( (a, i) => (
-                      <MenuItem value={a.category.toString()} key={i}> {a.category.toString()} </MenuItem>
+                    {getcategories.map( (a, i) => (
+                      <MenuItem value={a.category} key={i}>{a.category}</MenuItem>
                     ))}
-
-
+                    <MenuItem value={null}>All</MenuItem>
+                    <MenuItem value={"2007"}>2007</MenuItem>
+                    <MenuItem value={"2008"}>2008</MenuItem>
+                    <MenuItem value={"2009"}>2009</MenuItem>
                   </Select>
                 </FormControl>
 
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">Position</InputLabel>
-                  <Select
-                    labelId="position-select"
-                    id="position-select"
-                    value={position}
-                    label="position"
-                    onChange={e => setPosition(e.target.value)}
-                  >
-                    <MenuItem value={null}>All</MenuItem>
-                    {listCategory.map( (a, i) => (
-                      <MenuItem value={a.position} key={i}> {a.position} </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-                <div className="botoneraFiltros">
-                  <div className="btn btn_filter" onClick={getFiltrar}>Filtrar</div>
-                  <div className="btn btn_filter" onClick={deleteFiltros}>Borrar filtros</div>
-                </div>
-
+                <div className="btn" onClick={botonFiltrar}>Filtrar</div>
+                <div className="btn" onClick={borrarFiltros}>Borrar filtros</div>
 
 
 
               </div>
             </div>
             <div className="private_sections_list">
-              <PlayersCard data={search}/>
+              <PlayersCard data={filter}/>
             </div>
           </div>
         </main>
